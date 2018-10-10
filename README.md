@@ -63,4 +63,32 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Do not use ECB mode
 * Cryptopals challenges: https://cryptopals.com/
 
+## Threat Modeling:
+* Definition: a process by which you can determine what threats are important to an application and find points where defenses may be lacking.
+* Goals:
+  - Achieve better coverage in testing (test all the entrypoints)
+  - Find more interesting and valuable bugs (have a testing game plan before you start)
+  - Waste less time on dead ends (Eliminate entire classes of vulnerabilities before you even start testing)
+* “Heavy-weight” threat modeling (for large companies and internal security teams):
+  1. Decomposition: The modeler will document each component of the application and its infrastructure, then develop data flow diagrams that show how these components interact. Additionally, privilege boundaries are identified, to ensure that proper controls are in place for any data crossing these boundaries.
+  2. Threat Determination: Develop threats for each portion of the application, e.g. "attacker may be able to access administration features." You link each of these threats to the components that would be affected in the case of such an attack. And you rank them by means of an objective measure of severity.
+  3. Countermeasures.: Determine and document any countermeasures currently in place to prevent an attack, along with identifying new locations where countermeasures may be installed to prevent threats you have assessed.
+* Light-weight threat modeling (for bug bounty hunters and other security consultants):
+  1. Enumerate Entrypoints: Enable Burp Proxy and then use every function of the application which you can find, for every access level you have.
+  2. Document Target Assets: Think through and write down every asset in which an attacker may be interested, along with the business impact of its compromise.
+    - User PII and passwords
+    - Admin panel access
+    - Transaction histories
+    - Source code
+    - Database credentials
+  3. Develop Game Plan: Rank the entrypoints in order of perceived value.
+  4. Restrict Yourself: Handle the most applications in under an hour. Do not overthink it and reconsider your approach if you are going over this.
+* Resources:
+  - Example HackerOne threat model(https://www.hacker101.com/resources/hackerone_threat_model)
+  - OWASP Threat Modeling Guide(https://www.owasp.org/index.php/Application_Threat_Modeling)
+
+
+    ```
+
+
 ## Reference: https://www.hacker101.com
