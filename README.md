@@ -43,4 +43,24 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
 * Hash length extension:
   - Mitigation: When you are hashing a secret with data from the user, you should always use HMAC.
 
+## Crypto Wrap Up:
+* ECB mode: If you have control of data being encrypted in some way, then repetition is the easiest way to determine if ECBB mode is in use. In ECBB, each block is encrypted independently.
+  - Detection: If you put 47 'A' characters in a row into a payload that's encrypted, this will guarantee repetition if a block size of 16 bytes (128 bits) or less is used. No matter how many character are before or after those 47 As, you will always have enough to fill at least two blocks.
+  - Determining block size: Pick a character somewhere in the middle of your repeated As and turn it into a 'B'. You will see some number of bytes change, or a gap in the repetition. That number of bytes is your block size.
+  - Determining data offset: The number of characters you can change at the beginning of your payload is the offset from the beginning of the whole encrypted string. The number of characters you can change at the end of your payload is the offset from the end.
+* Padding oracles:
+  1. Only come into play with CBC mode, due to the XOR chaining nature of the mode.
+  2. You must be abble to manipulate the data. IF there's an HMAC then this is a no-go.
+  - Detection: run through all 256 possibilities for the last byte of the second-to-last block. There should be no more than two values that give you different errors; everything else should be padding errors.
+  - Exploitation: padbuster (https://github.com/GDSSecurity/PadBuster)
+* General advice:
+  - Do not design your own crpto protocols unless you are with thousand experts
+  - If you have data in flight, use TLS (what used to be SSL)
+  - If you have data at rest, use PGP
+  - Do not Mac-then-Encrypt
+  - Do not use hashes instead of MACs (you enable hash extension attacks)
+  - Do not reuse key-IV or key-nonce pairs (you open yourself up to a multitude of issues)
+  - Do not use ECB mode
+* Cryptopals challenges: https://cryptopals.com/
+
 ## Reference: https://www.hacker101.com
