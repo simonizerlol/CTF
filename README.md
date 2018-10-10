@@ -82,8 +82,58 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Example HackerOne threat model(https://www.hacker101.com/resources/hackerone_threat_model)
   - OWASP Threat Modeling Guide(https://www.owasp.org/index.php/Application_Threat_Modeling)
 
+## Burp 101
+* Getting Burp Proxy
+* Setting up Firefox to proxy through Burp
+* UI overview
+  - Target: allows you to see the tree view of all the domains and paths you viewed as well as specify the scope of your testing
+  - Proxy:
+    - Interceptor: allows you to view and manipulate web requests as they're in flight.
+    - HTTP history: shows you all the requests that the proxy has seen from your browser.
+    - Web socket history: shows the messages sent over web sockets and a multitude of options
+  - Spider: find some really useful pages and functionality you may have missed
+  - Intruder: perform large number of requests for various automated testing scenario
+  - Repeater: repeat existing requests and manipulate them to test for a multitude of bugs
+  - Sequencer: allows you to capture or load a set of tokens and assess them for flaws in various ways
+  - Decoder: allows you decode and encode data as base64 hex etc
+  - Comparer: allows you to compare two blocks of data
+* Target deep dive
+  - Using the site map
+  - Setting up your scope
+* Proxy deep dive
+  - Using the HTTP history and filtering
+  - Intercepting requests and responses
+  - Match and replace
+  - Unhiding hidden form fields
+* Using Repeater
+  - Sending requests from proxy history
+  - Manipulating requests
+    - Identifying XSS with ease
+* Using Decoder
+  - Decoding data from a request
+  - Encoding and hashing data
 
-    ```
+## Burp 201 (required Pro version)
+* Using Intruder
+  - Types of attacks
+  - Discovering and exploiting indirect object references
+  - Automatically extracting data
+  - Finding valid usernames
+  - Exploiting blind SQLi
+* Using Scanner
+  - Actively scanning pages of interest
+  - Triaging findings
+  - Customization
+* Searching Burp history
+* Advanced Proxy functionality
+  - CSRF proof of concept generation
+  - Invisible proxying
+  - Client-side certificates
 
+## Burp 301 (tricks to know) https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
+* Repeater: rename the tabs, auto scroll
+* Intruder:
+* Scanner:
+* Performance & problem solving:
 
 ## Reference: https://www.hacker101.com
