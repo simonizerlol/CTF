@@ -75,12 +75,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   3. Countermeasures.: Determine and document any countermeasures currently in place to prevent an attack, along with identifying new locations where countermeasures may be installed to prevent threats you have assessed.
 * Light-weight threat modeling (for bug bounty hunters and other security consultants):
   1. Enumerate Entrypoints: Enable Burp Proxy and then use every function of the application which you can find, for every access level you have.
-  2. Document Target Assets: Think through and write down every asset in which an attacker may be interested, along with the business impact of its compromise.
-    - User PII and passwords
-    - Admin panel access
-    - Transaction histories
-    - Source code
-    - Database credentials
+  2. Document Target Assets: Think through and write down every asset in which an attacker may be interested, along with the business impact of its compromise. E.g. User PII and passwords, Admin panel access, Transaction histories, Source code, Database credentials.
   3. Develop Game Plan: Rank the entrypoints in order of perceived value.
   4. Restrict Yourself: Handle the most applications in under an hour. Do not overthink it and reconsider your approach if you are going over this.
 * Resources:
