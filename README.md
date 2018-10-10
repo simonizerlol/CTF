@@ -18,4 +18,29 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
     - the goal is to break rainbow table and prevent hashes from repeating.
 * If not BCrypt: use SHA256 in PBKDF2 using per-user salt values with at least 10000 rounds
 
-### Reference: https://www.hacker101.com
+## Crypto:
+* One-time pads
+* Types of ciphers:
+  - Symmetric:
+    - Stream:
+    - Block: AES, DES, 3DES, Twofish
+  - Asymmetric: RSA
+* Block cipher modes:
+  - ECB (Electronic Codebook)
+  - CBC (Cipher Block Chaining)
+* Hashes
+* MACs (Message Authentication Codes)
+  - HMAC (Hash-based MAC): HMAC(key, message) = hash(key + hash(key + message))
+
+## Crypto Attacks:
+* Stream cipher key reuse: for RC4 stream ciphers
+  - Mitigation: XORed with a nonce prior to encryption/decryption
+* ECB block reordering
+* ECB decryption
+  - Mitigation: encrypt your data, then append a MAC of the encrypted data. (Note. Never MAC-then encrypt, which introduces a multitude of problems, such as padding oracles)
+* Padding: PKCS#7, look at the last byte of the last block and see how many padding bytes there are, then check that those all match.
+* Padding oracles: When you have CBC-mode data that is padded with PKCS#7. If the server behaves differently when decrypting improperly padded data than properly padded data, this is an oracle -- you can send it data and know whether or not it's correctly padded.
+* Hash length extension:
+  - Mitigation: When you are hashing a secret with data from the user, you should always use HMAC.
+
+## Reference: https://www.hacker101.com
