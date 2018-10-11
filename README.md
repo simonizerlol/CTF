@@ -1,6 +1,7 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
+# Session
 ## Web In Depth
 * HTTP basics
 * Cookie Security
@@ -194,4 +195,40 @@ https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
   - The principle of least privilege
   - Auditability
 
-## Reference: https://www.hacker101.com
+# Vulnerabilities
+The following contents have some overlaps with session section, they are more of a reference
+## Clickjacking
+https://www.hacker101.com/vulnerabilities/clickjacking
+## Command Injection
+https://www.hacker101.com/vulnerabilities/command_injection
+## Cross-Site Request Forgery (CSRF)
+https://www.hacker101.com/vulnerabilities/csrf
+## Directory Traversal
+https://www.hacker101.com/vulnerabilities/directory_traversal
+## Local/Remote File Inclusion
+https://www.hacker101.com/vulnerabilities/file_inclusion
+## Improper Authorization
+https://www.hacker101.com/vulnerabilities/improper_authorization
+## Insecure Password Storage
+https://www.hacker101.com/vulnerabilities/insecure_password_storage
+## Improper Handling of Null Termination
+https://www.hacker101.com/vulnerabilities/null_termination
+## Padding Oracle
+https://www.hacker101.com/vulnerabilities/padding_oracle
+## Reflected Cross-Site Scripting (XSS)
+https://www.hacker101.com/vulnerabilities/reflected_xss
+## Session Fixation
+https://www.hacker101.com/vulnerabilities/session_fixation
+## SQL Injection
+https://www.hacker101.com/vulnerabilities/sqli
+## Stored Cross-Site Scripting (XSS)
+https://www.hacker101.com/vulnerabilities/stored_xss
+## Stream Cipher Key Reuse
+https://www.hacker101.com/vulnerabilities/stream_reuse
+## Subdomain
+* use subdomain scraping and brute-forcing tools such as Sublist3r (https://github.com/aboul3la/Sublist3r)
+https://www.hacker101.com/vulnerabilities/subdomain_takeover
+## Unchecked Redirect
+
+# Reference
+https://www.hacker101.com
