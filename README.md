@@ -1,7 +1,7 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
-#Session
+# Session
 ## Web In Depth
 * HTTP basics
 * Cookie Security
@@ -196,7 +196,7 @@ https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
   - Auditability
 
 # Vulnerabilities
-The following contents have some overlaps with [session section](#session), they are more of a reference
+The following contents have some overlaps with [session section](# Session), they are more of a reference
 ## Clickjacking
 https://www.hacker101.com/vulnerabilities/clickjacking
 ## Command Injection
