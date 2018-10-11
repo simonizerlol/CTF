@@ -1,7 +1,7 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
-#Session
+# Session
 ## Web In Depth
 * HTTP basics
 * Cookie Security
