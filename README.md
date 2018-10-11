@@ -1,7 +1,53 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
-## File uploads
+## Web In Depth
+* HTTP basics
+* Cookie Security
+* HTML parsing
+* MIME sniffing
+* Encoding sniffing
+* Same-Origin Policy
+* CSRF (Cross-Site Request Forgery)
+
+## XSS and Authorization
+* XSS (Cross-Site Scripting)
+  - Types of XSS
+    - Stored
+    - Reflected
+    - DOM
+  - Detection
+  - Exploitation
+  - Mitigation
+* Authorization bypasses and forced browsing
+  - Detection
+  - Exploitation
+  - Mitigation
+
+## SQL Injection and Friends
+* SQLi (SQL Injection)
+* Blind SQLi
+* Directory traversal
+* Command injection
+
+## Session Fixation
+* Definition
+* Detection
+* Mitigation
+
+## Clickjacking
+* Definition
+* How it works
+* Mitigation
+
+## File Inclusion Bugs
+* LFI (Local File Inclusion)
+* RFI (Remote File Inclusion)
+* Detection
+* Exploitation
+* Mitigation
+
+## File Uploads Bugs
 * Mitigation:
   - do not host on the same domain.
 
@@ -9,7 +55,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
 * definition:
 * exploit:
 
-## Password Storage:
+## Password Storage
 * Use BCrypt when storing passwords on the server
   - SCrypt is a less battle-tested but still great solution. It's designed to not only be computationally expensive, but to use lots of RAM, making it hard to parallellze.
 * Do not use a bare hash (e.g. MD5, SHA1)
@@ -18,7 +64,8 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
     - the goal is to break rainbow table and prevent hashes from repeating.
 * If not BCrypt: use SHA256 in PBKDF2 using per-user salt values with at least 10000 rounds
 
-## Crypto:
+## Crypto series
+### Things to know
 * One-time pads
 * Types of ciphers:
   - Symmetric:
@@ -32,7 +79,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
 * MACs (Message Authentication Codes)
   - HMAC (Hash-based MAC): HMAC(key, message) = hash(key + hash(key + message))
 
-## Crypto Attacks:
+### Crypto Attacks
 * Stream cipher key reuse: for RC4 stream ciphers
   - Mitigation: XORed with a nonce prior to encryption/decryption
 * ECB block reordering
@@ -43,7 +90,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
 * Hash length extension:
   - Mitigation: When you are hashing a secret with data from the user, you should always use HMAC.
 
-## Crypto Wrap Up:
+### Crypto Wrap Up
 * ECB mode: If you have control of data being encrypted in some way, then repetition is the easiest way to determine if ECBB mode is in use. In ECBB, each block is encrypted independently.
   - Detection: If you put 47 'A' characters in a row into a payload that's encrypted, this will guarantee repetition if a block size of 16 bytes (128 bits) or less is used. No matter how many character are before or after those 47 As, you will always have enough to fill at least two blocks.
   - Determining block size: Pick a character somewhere in the middle of your repeated As and turn it into a 'B'. You will see some number of bytes change, or a gap in the repetition. That number of bytes is your block size.
@@ -63,7 +110,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Do not use ECB mode
 * Cryptopals challenges: https://cryptopals.com/
 
-## Threat Modeling:
+## Threat Modeling
 * Definition: a process by which you can determine what threats are important to an application and find points where defenses may be lacking.
 * Goals:
   - Achieve better coverage in testing (test all the entrypoints)
@@ -82,7 +129,8 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Example HackerOne threat model(https://www.hacker101.com/resources/hackerone_threat_model)
   - OWASP Threat Modeling Guide(https://www.owasp.org/index.php/Application_Threat_Modeling)
 
-## Burp 101
+## Burp series
+### Burp 101
 * Getting Burp Proxy
 * Setting up Firefox to proxy through Burp
 * UI overview
@@ -113,7 +161,7 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Decoding data from a request
   - Encoding and hashing data
 
-## Burp 201 (required Pro version)
+### Burp 201 (required Pro version)
 * Using Intruder
   - Types of attacks
   - Discovering and exploiting indirect object references
@@ -130,10 +178,20 @@ Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker10
   - Invisible proxying
   - Client-side certificates
 
-## Burp 301 (tricks to know) https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
+### Burp 301 (tricks to know)
+https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
 * Repeater: rename the tabs, auto scroll
 * Intruder:
 * Scanner:
 * Performance & problem solving:
+
+## Secure Architecture
+* Definition:
+* Basic structure for performing architecture reviews
+* Key focus areas
+  - Maximize isolation
+  - Securely store data, e.g. passwords
+  - The principle of least privilege
+  - Auditability
 
 ## Reference: https://www.hacker101.com
