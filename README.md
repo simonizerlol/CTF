@@ -197,50 +197,50 @@ https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
 
 # Vulnerabilities
 The following contents have some overlaps with [session section](#session), they are more of a reference
-## Clickjacking
-https://www.hacker101.com/vulnerabilities/clickjacking
+## [Clickjacking](https://www.hacker101.com/vulnerabilities/clickjacking)
 
-## Command Injection
-https://www.hacker101.com/vulnerabilities/command_injection
 
-## Cross-Site Request Forgery (CSRF)
-https://www.hacker101.com/vulnerabilities/csrf
+## [Command Injection](https://www.hacker101.com/vulnerabilities/command_injection)
 
-## Directory Traversal
-https://www.hacker101.com/vulnerabilities/directory_traversal
 
-## Local/Remote File Inclusion
-https://www.hacker101.com/vulnerabilities/file_inclusion
+## [Cross-Site Request Forgery (CSRF)](https://www.hacker101.com/vulnerabilities/csrf)
 
-## Improper Authorization
-https://www.hacker101.com/vulnerabilities/improper_authorization
 
-## Insecure Password Storage
-https://www.hacker101.com/vulnerabilities/insecure_password_storage
+## [Directory Traversal](https://www.hacker101.com/vulnerabilities/directory_traversal)
 
-## Improper Handling of Null Termination
-https://www.hacker101.com/vulnerabilities/null_termination
 
-## Padding Oracle
-https://www.hacker101.com/vulnerabilities/padding_oracle
+## [Local/Remote File Inclusion](https://www.hacker101.com/vulnerabilities/file_inclusion)
 
-## Reflected Cross-Site Scripting (XSS)
-https://www.hacker101.com/vulnerabilities/reflected_xss
 
-## Session Fixation
-https://www.hacker101.com/vulnerabilities/session_fixation
+## [Improper Authorization](https://www.hacker101.com/vulnerabilities/improper_authorization)
 
-## SQL Injection
-https://www.hacker101.com/vulnerabilities/sqli
 
-## Stored Cross-Site Scripting (XSS)
-https://www.hacker101.com/vulnerabilities/stored_xss
+## [Insecure Password Storage](https://www.hacker101.com/vulnerabilities/insecure_password_storage)
+
+
+## [Improper Handling of Null Termination](https://www.hacker101.com/vulnerabilities/null_termination)
+
+
+## [Padding Oracle](https://www.hacker101.com/vulnerabilities/padding_oracle)
+
+
+## [Reflected Cross-Site Scripting (XSS)](https://www.hacker101.com/vulnerabilities/reflected_xss)
+
+
+## [Session Fixation](https://www.hacker101.com/vulnerabilities/session_fixation)
+
+
+## [SQL Injection](https://www.hacker101.com/vulnerabilities/sqli)
+
+
+## [Stored Cross-Site Scripting (XSS)](https://www.hacker101.com/vulnerabilities/stored_xss)
+
 
 ## [Stream Cipher Key Reuse](https://www.hacker101.com/vulnerabilities/stream_reuse)
 
 
-## Subdomain
-https://www.hacker101.com/vulnerabilities/subdomain_takeover
+## [Subdomain](https://www.hacker101.com/vulnerabilities/subdomain_takeover)
+
 * use subdomain scraping and brute-forcing tools such as Sublist3r (https://github.com/aboul3la/Sublist3r)
 
 ## Unchecked Redirect
