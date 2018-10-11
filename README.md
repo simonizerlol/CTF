@@ -1,7 +1,7 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
-# Session
+#Session
 ## Web In Depth
 * HTTP basics
 * Cookie Security
@@ -196,7 +196,7 @@ https://www.youtube.com/watch?time_continue=137&v=boHIjDHGmIo
   - Auditability
 
 # Vulnerabilities
-The following contents have some overlaps with session section, they are more of a reference
+The following contents have some overlaps with [session section](#session), they are more of a reference
 ## Clickjacking
 https://www.hacker101.com/vulnerabilities/clickjacking
 ## Command Injection
@@ -226,8 +226,9 @@ https://www.hacker101.com/vulnerabilities/stored_xss
 ## Stream Cipher Key Reuse
 https://www.hacker101.com/vulnerabilities/stream_reuse
 ## Subdomain
-* use subdomain scraping and brute-forcing tools such as Sublist3r (https://github.com/aboul3la/Sublist3r)
 https://www.hacker101.com/vulnerabilities/subdomain_takeover
+* use subdomain scraping and brute-forcing tools such as Sublist3r (https://github.com/aboul3la/Sublist3r)
+
 ## Unchecked Redirect
 
 # Reference
