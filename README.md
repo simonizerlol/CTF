@@ -1,6 +1,8 @@
 # CTF (Capture The Flag)
 Hunt for bugs and experiment with exploitation in practice: https://ctf.hacker101.com/ctf
 
+useful link to check out (Mandarin中文):https://github.com/ktecv2000/How-to-play-CTF
+
 # Session
 ## Web In Depth
 * HTTP basics
